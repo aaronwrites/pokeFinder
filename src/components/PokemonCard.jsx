@@ -1,6 +1,6 @@
 import { useRecoilValue } from "recoil"
-import { Tag } from "./components/Tag"
-import { pokeDetailsFetcher } from "./store/atoms/pokemonAtom"
+import { Tag } from "../components/Tag"
+import { pokeDetailsFetcher } from "../store/atoms/pokemonAtom"
 import { useNavigate } from "react-router-dom"
 
 export function PokemonCard({ url }) {

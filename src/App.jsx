@@ -1,10 +1,9 @@
-import { Landing } from './Landing'
+import {Landing} from './pages/Landing'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Pokemons } from './Pokemons';
-import { Test } from './Test';
+import { Pokemons } from './pages/Pokemons';
 import { RecoilRoot } from 'recoil';
 import React from 'react';
-import { PokemonDetails } from './PokemonDetails';
+import { PokemonDetails } from './pages/PokemonDetails';
 function App() {
 
   return (
@@ -15,7 +14,6 @@ function App() {
             <Routes>
                 <Route path='/' element={<Landing />} />
                 <Route path='/pokemons' element={<Pokemons />} />
-                <Route path='/test' element={<Test />}></Route>
                 <Route path='/pokemon/details/:id' element={<PokemonDetails />}></Route>
 
             </Routes>

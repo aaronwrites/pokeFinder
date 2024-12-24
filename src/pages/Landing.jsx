@@ -1,7 +1,7 @@
-import heroImage from "./assets/hero.png"
+import heroImage from "../assets/hero.png"
 import { useNavigate } from "react-router-dom"
-import { TwitterLogo } from "./assets/TwitterLogo";
-import { GithubLogo } from "./assets/GithubLogo";
+import { TwitterLogo } from "../assets/TwitterLogo";
+import { GithubLogo } from "../assets/GithubLogo";
 
 
 //Gradient classes - after:content-[''] after:absolute after:w-[800px] after:h-[800px] after:rounded-full after:bg-[#32F1E6] after:blur-[250px] after:z-10 after:-top-96 after:-left-96 after:bg-opacity-[30%]
@@ -53,7 +53,7 @@ export function Logo() {
     }
     return (
         <div onClick={handleNavigate} className="relative bg-white p-4 rounded-2xl border border-white border-opacity-20 bg-opacity-10 cursor-pointer">
-            <h1 className="text-green text-3xl font-delaGothicOne tracking-tighter">PokéDex</h1>
+            <h1 className="text-yellow-200 text-3xl font-delaGothicOne tracking-tighter">PokeFinder</h1>
         </div>
     )
 }

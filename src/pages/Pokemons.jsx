@@ -1,7 +1,7 @@
 import { useRecoilValue } from "recoil";
 import { Logo } from "./Landing";
-import { PokemonCard } from "./PokemonCard";
-import { pokemonAtom } from "./store/atoms/pokemonAtom";
+import { PokemonCard } from "../components/PokemonCard";
+import { pokemonAtom } from "../store/atoms/pokemonAtom";
 
 export function Pokemons() {
     const pokeData = useRecoilValue(pokemonAtom);
