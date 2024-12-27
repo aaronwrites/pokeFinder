@@ -11,12 +11,15 @@ export function Progress({ stats, color }) {
         "red": {stops: "from-[#EE781E] to-[#F5C67B]"},
         "yellow": {stops: "from-yellow-500 to-yellow-200"}
     }
-    const progress = `${(stats.base_stat / 100) * 450}px`
+    const progress = `${(stats.base_stat / 100) * 100}%`
+
     return (
         <div className="flex items-center gap-4">
-            <p className="font-mada font-bold w-20">{`${stats.stat.name.charAt(0).toUpperCase()}${stats.stat.name.slice(1)}`}</p>
-            <div className={`h-3 rounded-3xl bg-gradient-to-r ${progressStops[color] ? progressStops[color].stops : progressStops["blue"].stops}`} style={{ width: `${progress}` }}></div>
-            <p className="font-mada font-bold">{stats.base_stat}</p>
+            <p className="font-mada font-bold w-16">{`${stats.stat.name.charAt(0).toUpperCase()}${stats.stat.name.slice(1)}`}</p>
+            <div className="w-52 md:w-[450px] flex items-center gap-4">
+                <div className={`h-3 rounded-3xl bg-gradient-to-r ${progressStops[color] ? progressStops[color].stops : progressStops["blue"].stops}`} style={{ width: `${progress}` }}></div>
+                <p className="font-mada font-bold">{stats.base_stat}</p>
+            </div>
         </div>
     )
 }
